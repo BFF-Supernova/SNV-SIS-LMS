@@ -1,0 +1,81 @@
+<!-- @dsCard group="Components" name="Wizard kit" subtitle="Stage shell, progress rail, Express/Custom, dependency toast" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عُدّة المعالج · Wizard kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<style>
+  .steps { display:flex; flex-direction:column; gap:2px; }
+  .step { display:flex; gap:12px; align-items:center; padding:8px 10px; border-radius:var(--r-md); font-size:var(--fs-sm); color:var(--ink-500); }
+  .step .num { width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:var(--fs-xs);
+    font-weight:700;background:var(--ink-200);color:var(--ink-600);flex:none; }
+  .step.done { color:var(--ink-700); } .step.done .num { background:var(--success-500);color:#fff; }
+  .step.active { color:var(--nova-700);font-weight:700;background:var(--nova-50); }
+  .step.active .num { background:var(--nova-500);color:#fff; }
+  .toast { display:flex;gap:12px;align-items:flex-start;background:var(--ink-950);color:#fff;
+    padding:14px 16px;border-radius:var(--r-md);max-width:420px;box-shadow:var(--sh-lg); }
+  .toast .ico { color:var(--gold-400);font-size:18px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="stack" style="max-width:980px;margin:0 auto;">
+    <div><h1 style="font-size:var(--fs-h1);font-weight:800;">عُدّة المعالج · Setup Wizard kit</h1>
+      <p class="muted">Windows-OOBE-style chrome: a left progress rail, a focused stage body, and a persistent “you can change this later” reassurance.</p></div>
+
+    <div class="card card-pad grid" style="grid-template-columns:240px 1fr;gap:32px;">
+      <div>
+        <div class="section-label">Progress rail</div>
+        <div class="steps">
+          <div class="step done"><span class="num">✓</span> الترحيب واللغة</div>
+          <div class="step done"><span class="num">✓</span> نوع المؤسسة</div>
+          <div class="step active"><span class="num">3</span> البنية الأكاديمية</div>
+          <div class="step"><span class="num">4</span> الحضور</div>
+          <div class="step"><span class="num">5</span> التقييم و LMS</div>
+          <div class="step"><span class="num">6</span> الرسوم والمالية</div>
+          <div class="step"><span class="num">7</span> التواصل</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Stage header + progress</div>
+        <div class="row" style="justify-content:space-between;">
+          <div><div class="muted" style="font-size:var(--fs-sm)">الخطوة 3 من 12</div>
+            <h2 style="font-size:var(--fs-h2);font-weight:800;">البنية الأكاديمية</h2></div>
+          <span class="badge badge-nova">وضع مخصّص · Custom</span>
+        </div>
+        <div class="progress" style="margin:16px 0 24px;"><span style="width:25%"></span></div>
+
+        <div class="section-label">Express vs Custom</div>
+        <div class="grid" style="grid-template-columns:1fr 1fr;">
+          <div class="opt is-selected"><div class="opt-ico">⚡</div>
+            <div><div class="opt-title">سريع · Express</div><div class="opt-desc">إعدادات موصى بها لنوع مؤسستك، ثم الهوية مباشرة.</div></div><div class="opt-check">✓</div></div>
+          <div class="opt"><div class="opt-ico">⚙️</div>
+            <div><div class="opt-title">مخصّص · Custom</div><div class="opt-desc">كل سؤال خطوة بخطوة للتحكم الكامل.</div></div><div class="opt-check">✓</div></div>
+        </div>
+
+        <div class="row" style="justify-content:space-between;margin-top:24px;">
+          <button class="btn btn-ghost">رجوع</button>
+          <div class="row">
+            <span class="dotline">يمكنك تغيير ذلك لاحقًا</span>
+            <button class="btn btn-primary">متابعة ✦</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Auto-dependency resolution (silent, then explained)</div>
+      <div class="toast">
+        <span class="ico">✦</span>
+        <div>الحضور بالحصة يحتاج إلى جدول دراسي — لذلك <b>فعّلنا الجدول الدراسي تلقائيًا</b>.
+          <div class="hint" style="color:var(--ink-300);margin-top:4px;">Per-period attendance requires a timetable, so we turned that on too.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

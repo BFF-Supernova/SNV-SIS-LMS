@@ -1,0 +1,97 @@
+<!-- @dsCard group="Screens · Setup Wizard" name="Stage 1 — Organization type" subtitle="The master switch that sets every default" viewport-width="1280" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المعالج — نوع المؤسسة</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<style>
+  .wiz { display:grid; grid-template-columns: 320px 1fr; min-height:100vh; }
+  .wiz-aside { background: radial-gradient(700px 360px at 90% -10%, var(--nova-700), transparent 60%),
+      linear-gradient(170deg, var(--nova-950), var(--nova-900)); color:#fff; padding: var(--s-10) var(--s-8); display:flex; flex-direction:column; }
+  .wiz-aside .brand .name { color:#fff; }
+  .steps { display:flex; flex-direction:column; gap:2px; margin-top: var(--s-10); }
+  .step { display:flex; gap:12px; align-items:center; padding:9px 12px; border-radius:var(--r-md); font-size:var(--fs-sm); color:var(--nova-100); }
+  .step .num { width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:var(--fs-xs);font-weight:700;background:rgba(255,255,255,.14);color:#fff;flex:none; }
+  .step.done .num { background:var(--success-500); } .step.done { color:#fff; }
+  .step.active { background:rgba(255,255,255,.12);color:#fff;font-weight:700; }
+  .step.active .num { background:var(--gold-500);color:var(--ink-950); }
+  .wiz-body { padding: var(--s-10) var(--s-12); overflow:auto; }
+  .wiz-inner { width:100%; max-width:780px; margin:0 auto; }
+  .profiles { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  .preview-list { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  @media (max-width:900px){ .wiz{grid-template-columns:1fr;} .wiz-aside{display:none;} .profiles{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wiz">
+  <aside class="wiz-aside">
+    <div class="brand" style="padding:0;"><div class="logo">✦</div><div class="name">SNV SIS<small>StudentFlow</small></div></div>
+    <div class="steps">
+      <div class="step done"><span class="num">✓</span> الترحيب واللغة</div>
+      <div class="step active"><span class="num">1</span> نوع المؤسسة</div>
+      <div class="step"><span class="num">2</span> البنية الأكاديمية</div>
+      <div class="step"><span class="num">3</span> الحضور</div>
+      <div class="step"><span class="num">4</span> التقييم و LMS</div>
+      <div class="step"><span class="num">…</span> 12 خطوة</div>
+    </div>
+  </aside>
+
+  <main class="wiz-body">
+    <div class="wiz-inner">
+      <div class="row" style="justify-content:space-between;">
+        <div><div class="muted" style="font-size:var(--fs-sm)">الخطوة 1 من 12</div>
+          <h1 style="font-size:var(--fs-h1);font-weight:800;">ما نوع مؤسستك؟</h1>
+          <p class="muted">هذه الإجابة الوحيدة تضبط كل الإعدادات الأساسية — وكل ما بعدها يعدّلها.</p></div>
+        <span class="badge badge-nova">Custom</span>
+      </div>
+
+      <div class="progress" style="margin:18px 0 26px;"><span style="width:8.3%"></span></div>
+
+      <div class="profiles">
+        <div class="opt"><div class="opt-ico">👤</div><div><div class="opt-title">مدرّس فردي · Teacher</div><div class="opt-desc">جلسات، رسوم لكل طالب، مكتبة فيديو — تطبيق خفيف.</div></div><div class="opt-check">✓</div></div>
+        <div class="opt"><div class="opt-ico">🏢</div><div><div class="opt-title">سنتر · Center</div><div class="opt-desc">عدة مدرّسين/مواد، مجموعات، حضور بالاستقبال، LMS منظّم.</div></div><div class="opt-check">✓</div></div>
+        <div class="opt is-selected"><div class="opt-ico">🏫</div><div><div class="opt-title">مدرسة · School</div><div class="opt-desc">عام دراسي، جداول، شهادات، عمليات، تقارير الوزارة.</div></div><div class="opt-check">✓</div></div>
+        <div class="opt"><div class="opt-ico">🏛️</div><div><div class="opt-title">مجموعة · Group</div><div class="opt-desc">عدة فروع تحت لوحة واحدة + تقارير عبر الفروع.</div></div><div class="opt-check">✓</div></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:18px;gap:14px;">
+        <div class="field"><label class="label">عدد الفروع</label>
+          <select class="select"><option selected>فرع واحد</option><option>2 – 5</option><option>6 أو أكثر</option></select>
+          <span class="hint">أكثر من فرع يُفعّل لوحة الفروع تلقائيًا.</span></div>
+        <div class="field"><label class="label">مادة واحدة أم متعددة؟</label>
+          <select class="select"><option>مادة واحدة</option><option selected>متعددة المواد</option></select></div>
+      </div>
+
+      <div class="card" style="margin-top:22px;background:var(--nova-50);border-color:var(--nova-200);">
+        <div class="card-bd">
+          <div class="row" style="justify-content:space-between;">
+            <b>سيتم تفعيل هذه الوحدات لملف «مدرسة»</b>
+            <span class="badge badge-nova">معاينة مباشرة</span>
+          </div>
+          <div class="preview-list">
+            <span class="badge badge-success">محرك الفصول الدراسية</span>
+            <span class="badge badge-success">الجدول الدراسي</span>
+            <span class="badge badge-success">كشف الدرجات والشهادات</span>
+            <span class="badge badge-success">الحضور بالحصة</span>
+            <span class="badge badge-success">عمليات المدرسة (HR/نقل/مكتبة)</span>
+            <span class="badge badge-success">تقارير الوزارة EMIS</span>
+            <span class="badge badge-success">واتساب موحّد</span>
+            <span class="badge badge-outline">الفصل المباشر — مغلق</span>
+            <span class="badge badge-outline">لوحة الفروع — مغلق</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="justify-content:space-between;margin-top:30px;">
+        <button class="btn btn-ghost">رجوع</button>
+        <button class="btn btn-primary">متابعة ✦</button>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

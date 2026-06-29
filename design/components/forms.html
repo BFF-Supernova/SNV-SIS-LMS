@@ -1,0 +1,82 @@
+<!-- @dsCard group="Components" name="Form controls" subtitle="Inputs, selects, toggles, option cards" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عناصر الإدخال</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+</head>
+<body>
+<div class="canvas">
+  <div class="stack" style="max-width:900px;margin:0 auto;">
+    <div><h1 style="font-size:var(--fs-h1);font-weight:800;">عناصر الإدخال · Form controls</h1></div>
+
+    <div class="card card-pad grid" style="grid-template-columns:1fr 1fr;gap:20px;">
+      <div class="field">
+        <label class="label">اسم المؤسسة</label>
+        <input class="input" placeholder="مثال: مدرسة النور الدولية">
+        <span class="hint">يظهر على التقارير وبطاقات الطلاب.</span>
+      </div>
+      <div class="field">
+        <label class="label">النطاق الفرعي</label>
+        <input class="input" value="alnoor" dir="ltr">
+        <span class="hint">alnoor.snvsis.app</span>
+      </div>
+      <div class="field">
+        <label class="label">عدد الطلاب التقريبي</label>
+        <select class="select">
+          <option>أقل من 100</option><option selected>100 – 1000</option><option>أكثر من 1000</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="label">العملة</label>
+        <select class="select"><option selected>جنيه مصري (EGP)</option><option>دولار (USD)</option></select>
+      </div>
+      <div class="field" style="grid-column:1/-1;">
+        <label class="label">ملاحظات الإعداد</label>
+        <textarea class="textarea" rows="3" placeholder="أي تفاصيل إضافية للفريق…"></textarea>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Toggles (module enablement)</div>
+      <div class="stack" style="gap:14px;">
+        <div class="row" style="justify-content:space-between;">
+          <div><b>الجدول الدراسي (Timetabling)</b><div class="hint">حصص، قاعات، توزيع المدرّسين، كشف التعارض.</div></div>
+          <label class="toggle"><input type="checkbox" checked><span class="track"></span><span class="knob"></span></label>
+        </div>
+        <hr class="divider" style="margin:0">
+        <div class="row" style="justify-content:space-between;">
+          <div><b>الفصل الافتراضي المباشر (Live class)</b> <span class="badge badge-gold">Add-on</span><div class="hint">Zoom / Meet / Teams / BBB.</div></div>
+          <label class="toggle"><input type="checkbox"><span class="track"></span><span class="knob"></span></label>
+        </div>
+        <hr class="divider" style="margin:0">
+        <div class="row" style="justify-content:space-between;">
+          <div><b>فاتورة ETA الإلكترونية</b> <span class="badge badge-info">مصر</span><div class="hint">إلزامي عند إصدار فواتير ضريبية رسمية.</div></div>
+          <label class="toggle"><input type="checkbox" checked disabled><span class="track"></span><span class="knob"></span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Option cards (single-select)</div>
+      <div class="grid" style="grid-template-columns:1fr 1fr;">
+        <div class="opt is-selected">
+          <div class="opt-ico">🏫</div>
+          <div><div class="opt-title">مدرسة · School</div><div class="opt-desc">عام دراسي كامل، جداول، شهادات، تقارير الوزارة.</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+        <div class="opt">
+          <div class="opt-ico">🏢</div>
+          <div><div class="opt-title">سنتر · Center</div><div class="opt-desc">عدة مدرّسين ومواد، مجموعات، حضور بالاستقبال.</div></div>
+          <div class="opt-check">✓</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

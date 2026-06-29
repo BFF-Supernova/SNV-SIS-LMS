@@ -1,0 +1,60 @@
+<!-- @dsCard group="Foundations" name="Spacing, radius & elevation" subtitle="4pt grid, radii, shadows" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المسافات · Spacing</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<style>
+  .bar { background: var(--nova-200); height:16px; border-radius:4px; }
+  .sp-row { display:flex; align-items:center; gap:var(--s-4); padding:6px 0; }
+  .sp-row .tag { width:110px; font-family:var(--font-mono); font-size:var(--fs-xs); color:var(--ink-500); }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="stack" style="max-width:900px;margin:0 auto;">
+    <div>
+      <h1 style="font-size:var(--fs-h1);font-weight:800;">المسافات والحواف والظلال</h1>
+      <p class="muted">Everything snaps to a 4&nbsp;pt grid. Radii scale with surface size; elevation communicates depth, not decoration.</p>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Spacing scale (4pt)</div>
+      <div class="sp-row"><div class="tag">--s-1 · 4</div><div class="bar" style="width:4px"></div></div>
+      <div class="sp-row"><div class="tag">--s-2 · 8</div><div class="bar" style="width:8px"></div></div>
+      <div class="sp-row"><div class="tag">--s-3 · 12</div><div class="bar" style="width:12px"></div></div>
+      <div class="sp-row"><div class="tag">--s-4 · 16</div><div class="bar" style="width:16px"></div></div>
+      <div class="sp-row"><div class="tag">--s-6 · 24</div><div class="bar" style="width:24px"></div></div>
+      <div class="sp-row"><div class="tag">--s-8 · 32</div><div class="bar" style="width:32px"></div></div>
+      <div class="sp-row"><div class="tag">--s-12 · 48</div><div class="bar" style="width:48px"></div></div>
+      <div class="sp-row"><div class="tag">--s-16 · 64</div><div class="bar" style="width:64px"></div></div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Radius</div>
+      <div class="row" style="gap:20px;">
+        <div style="text-align:center"><div style="width:90px;height:64px;background:var(--nova-100);border-radius:var(--r-sm)"></div><div class="mono" style="margin-top:8px">sm · 8</div></div>
+        <div style="text-align:center"><div style="width:90px;height:64px;background:var(--nova-100);border-radius:var(--r-md)"></div><div class="mono" style="margin-top:8px">md · 12</div></div>
+        <div style="text-align:center"><div style="width:90px;height:64px;background:var(--nova-100);border-radius:var(--r-lg)"></div><div class="mono" style="margin-top:8px">lg · 16</div></div>
+        <div style="text-align:center"><div style="width:90px;height:64px;background:var(--nova-100);border-radius:var(--r-xl)"></div><div class="mono" style="margin-top:8px">xl · 22</div></div>
+        <div style="text-align:center"><div style="width:90px;height:64px;background:var(--nova-100);border-radius:var(--r-pill)"></div><div class="mono" style="margin-top:8px">pill</div></div>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Elevation</div>
+      <div class="row" style="gap:24px;">
+        <div style="width:140px;height:80px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--sh-xs);display:grid;place-items:center;" class="mono">xs</div>
+        <div style="width:140px;height:80px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--sh-sm);display:grid;place-items:center;" class="mono">sm</div>
+        <div style="width:140px;height:80px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--sh-md);display:grid;place-items:center;" class="mono">md</div>
+        <div style="width:140px;height:80px;background:#fff;border-radius:var(--r-lg);box-shadow:var(--sh-lg);display:grid;place-items:center;" class="mono">lg</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

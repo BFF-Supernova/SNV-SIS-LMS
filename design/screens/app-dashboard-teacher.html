@@ -1,0 +1,75 @@
+<!-- @dsCard group="Screens · Tenant app" name="Teacher dashboard" subtitle="Same codebase, ~6 menus — config gating proof" viewport-width="1280" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تطبيق المدرّس — لوحة التحكم</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">✦</div><div class="name">أ. منى للرياضيات<small>Teacher</small></div></div>
+    <div class="nav-group">القائمة</div>
+    <div class="nav-item active"><span class="ico">▦</span> لوحة التحكم</div>
+    <div class="nav-item"><span class="ico">🎓</span> طلابي <span class="tag">86</span></div>
+    <div class="nav-item"><span class="ico">✅</span> الحضور</div>
+    <div class="nav-item"><span class="ico">📝</span> الاختبارات</div>
+    <div class="nav-item"><span class="ico">▶️</span> مكتبة الفيديو</div>
+    <div class="nav-item"><span class="ico">💳</span> الرسوم</div>
+    <div class="nav-item" style="margin-top:auto;"><span class="ico">⚙️</span> الإعدادات</div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="search"><span class="ico">🔍</span><input class="input" placeholder="ابحث عن طالب أو اختبار…"></div>
+      <span class="badge badge-outline">باقة المدرّس</span>
+      <div class="avatar alt">من</div>
+    </div>
+
+    <div class="content">
+      <div class="page-hd">
+        <div><h1>أهلًا أ. منى 👋</h1><p>لديك حصتان اليوم و12 إجابة بانتظار التصحيح</p></div>
+        <button class="btn btn-primary">＋ اختبار جديد</button>
+      </div>
+
+      <div class="banner banner-info" style="margin-bottom:24px;">
+        <span class="ico">✦</span>
+        <div>هذه واجهة <b>نفس المنصة</b> لكنها مُهيّأة لملف «مدرّس» — 6 قوائم فقط بلا جداول أو شهادات أو عمليات. <b>الوحدات المخفية ليست معطّلة، بل غير ظاهرة.</b></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px;">
+        <div class="tile kpi"><div class="k-label">إجمالي الطلاب</div><div class="k-value">86</div><div class="k-delta delta-up">▲ 5 هذا الأسبوع</div></div>
+        <div class="tile kpi"><div class="k-label">رسوم محصّلة</div><div class="k-value">78٪</div><div class="k-delta delta-down">▼ 6 متأخرين</div></div>
+        <div class="tile kpi"><div class="k-label">مشاهدات الفيديو</div><div class="k-value">1,920</div><div class="k-delta delta-up">▲ 12٪</div></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:2fr 1fr;">
+        <div class="card">
+          <div class="card-hd"><h3>اختبارات هذا الأسبوع</h3><span class="badge badge-nova">توليد بالذكاء الاصطناعي مُفعّل</span></div>
+          <table class="table">
+            <thead><tr><th>الاختبار</th><th>المجموعة</th><th>الحالة</th><th>المتوسط</th></tr></thead>
+            <tbody>
+              <tr><td>جبر — الوحدة 4</td><td>الثالث الثانوي</td><td><span class="badge badge-success">مُصحّح</span></td><td class="num">84٪</td></tr>
+              <tr><td>هندسة — مراجعة</td><td>الثاني الثانوي</td><td><span class="badge badge-warning">قيد التصحيح</span></td><td class="num">—</td></tr>
+              <tr><td>تفاضل — تشخيصي</td><td>الثالث الثانوي</td><td><span class="badge badge-info">مجدول الغد</span></td><td class="num">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card card-pad">
+          <div class="section-label">إرسال واتساب</div>
+          <p class="muted" style="font-size:var(--fs-sm);">يُرسل من رقمك الخاص — نتائج وتنبيهات الغياب لأولياء الأمور مباشرة.</p>
+          <div class="stack" style="gap:10px;margin-top:14px;">
+            <button class="btn btn-secondary btn-block">إرسال نتائج الجبر</button>
+            <button class="btn btn-ghost btn-block">تذكير بالرسوم المتأخرة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

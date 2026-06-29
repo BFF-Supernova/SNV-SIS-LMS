@@ -1,0 +1,55 @@
+<!-- @dsCard group="Foundations" name="Typography" subtitle="Tajawal Arabic-first scale, RTL rhythm, numerals" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الخطوط · Typography</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<style>
+  .specimen { display:flex; align-items:baseline; justify-content:space-between; gap:var(--s-6);
+    padding: var(--s-4) 0; border-bottom:1px dashed var(--border); }
+  .specimen .tag { font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--ink-400); white-space:nowrap; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="stack" style="max-width:900px;margin:0 auto;">
+    <div>
+      <h1 style="font-size:var(--fs-h1);font-weight:800;">الخطوط · Typography</h1>
+      <p class="muted">Primary face is <b>Tajawal</b> (Cairo as fallback) — designed for Arabic screen UI and pairs cleanly with Latin. Numerals use tabular figures across tables and finance.</p>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Type scale (Arabic)</div>
+      <div class="specimen"><div style="font-size:var(--fs-display);font-weight:800;">منصة تعليمية متكاملة</div><div class="tag">display · 34/800</div></div>
+      <div class="specimen"><div style="font-size:var(--fs-h1);font-weight:800;">إعداد المؤسسة التعليمية</div><div class="tag">h1 · 26/800</div></div>
+      <div class="specimen"><div style="font-size:var(--fs-h2);font-weight:700;">البنية الأكاديمية والفصول</div><div class="tag">h2 · 21/700</div></div>
+      <div class="specimen"><div style="font-size:var(--fs-h3);font-weight:700;">الحضور والغياب اليومي</div><div class="tag">h3 · 17/700</div></div>
+      <div class="specimen"><div style="font-size:var(--fs-body);">نص أساسي: يمكنك تغيير هذه الإعدادات لاحقًا من لوحة الإعدادات.</div><div class="tag">body · 15/400</div></div>
+      <div class="specimen"><div style="font-size:var(--fs-sm);color:var(--ink-600);">نص ثانوي للوصف والمساعدة في الحقول.</div><div class="tag">sm · 13/400</div></div>
+      <div class="specimen"><div style="font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-400);font-weight:700;">SECTION LABEL · عنوان قسم</div><div class="tag">xs · 11.5/700</div></div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Latin pairing (Inter) &amp; numerals</div>
+      <div class="specimen" dir="ltr"><div style="font-size:var(--fs-h2);font-weight:700;font-family:var(--font-en);">Configuration-driven SIS + LMS</div><div class="tag">Inter 21/700</div></div>
+      <div class="specimen"><div style="font-size:var(--fs-h2);font-variant-numeric:tabular-nums;font-weight:700;">١٢٤٠ طالب · 1,240 · ٥٠٠ EGP</div><div class="tag">tabular nums</div></div>
+      <div class="specimen"><div class="mono">tenantId: 7f3a-… · MRR ▲ 12.4%</div><div class="tag">JetBrains Mono</div></div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Weights</div>
+      <div class="row" style="gap:24px;align-items:baseline;">
+        <span style="font-weight:400;font-size:22px;">Regular 400</span>
+        <span style="font-weight:500;font-size:22px;">Medium 500</span>
+        <span style="font-weight:700;font-size:22px;">Bold 700</span>
+        <span style="font-weight:800;font-size:22px;">ExtraBold 800</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
