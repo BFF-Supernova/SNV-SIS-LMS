@@ -1,0 +1,67 @@
+<!-- @dsCard group="Components" name="Buttons & status badges" subtitle="Primary/secondary/ghost/danger/gold · lifecycle pills" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الأزرار والشارات</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+</head>
+<body>
+<div class="canvas">
+  <div class="stack" style="max-width:900px;margin:0 auto;">
+    <div><h1 style="font-size:var(--fs-h1);font-weight:800;">الأزرار والشارات · Buttons &amp; badges</h1></div>
+
+    <div class="card card-pad">
+      <div class="section-label">Variants</div>
+      <div class="row">
+        <button class="btn btn-primary"><span class="ico">✦</span> حفظ ومتابعة</button>
+        <button class="btn btn-secondary">رجوع</button>
+        <button class="btn btn-ghost">إلغاء</button>
+        <button class="btn btn-subtle">تخطي الآن</button>
+        <button class="btn btn-gold"><span class="ico">★</span> ترقية الباقة</button>
+        <button class="btn btn-danger">إيقاف الوصول</button>
+        <button class="btn btn-primary" disabled>غير متاح</button>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Sizes</div>
+      <div class="row" style="align-items:center;">
+        <button class="btn btn-primary btn-lg">ابدأ الإعداد</button>
+        <button class="btn btn-primary">حفظ</button>
+        <button class="btn btn-primary btn-sm">تعديل</button>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Tenant lifecycle (control plane)</div>
+      <div class="row" style="gap:8px;">
+        <span class="badge badge-nova"><span class="dot"></span>Provisioning</span>
+        <span class="badge badge-info"><span class="dot"></span>Trial</span>
+        <span class="badge badge-success"><span class="dot"></span>Active</span>
+        <span class="badge badge-warning"><span class="dot"></span>Past-due</span>
+        <span class="badge badge-danger"><span class="dot"></span>Suspended</span>
+        <span class="badge"><span class="dot"></span>Terminated</span>
+        <span class="badge badge-outline"><span class="dot"></span>Archived</span>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Plan tiers &amp; meta</div>
+      <div class="row" style="gap:8px;">
+        <span class="badge badge-outline">Teacher</span>
+        <span class="badge badge-outline">Center</span>
+        <span class="badge badge-nova">School</span>
+        <span class="badge badge-gold">★ Group</span>
+        <span class="badge badge-success">PDPL ✓</span>
+        <span class="badge badge-info">ETA e-invoice</span>
+        <span class="badge badge-warning">Add-on: Live class</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

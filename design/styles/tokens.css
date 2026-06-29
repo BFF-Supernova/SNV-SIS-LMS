@@ -1,0 +1,87 @@
+/* =====================================================================
+   SNV SIS — Design Tokens
+   Arabic-first / RTL education platform · Supernova Middle East
+   Single source of truth for color, type, spacing, radius, elevation.
+   ===================================================================== */
+
+:root {
+  /* ---- Brand: Supernova (a violet nova with a gold star) ---- */
+  --nova-50:  #f1f0fe;
+  --nova-100: #e4e2fd;
+  --nova-200: #cdc9fb;
+  --nova-300: #ada5f7;
+  --nova-400: #8b7cf1;
+  --nova-500: #6f5ce8;   /* primary */
+  --nova-600: #5b46d6;   /* primary-strong */
+  --nova-700: #4c39b4;
+  --nova-800: #3f3193;
+  --nova-900: #362c76;
+  --nova-950: #221a4d;
+
+  /* ---- Accent: gold star (highlights, ratings, premium add-ons) ---- */
+  --gold-300: #ffd98a;
+  --gold-400: #fbc04a;
+  --gold-500: #f5a623;
+  --gold-600: #d9870e;
+
+  /* ---- Semantic ---- */
+  --success-50: #e9f9f1;  --success-500: #16a36a;  --success-700: #0f7a4f;
+  --warning-50: #fef4e6;  --warning-500: #e9920b;  --warning-700: #b56f06;
+  --danger-50:  #fdecec;  --danger-500:  #e0413e;  --danger-700:  #b32c2a;
+  --info-50:    #e9f2fe;  --info-500:    #2f7ff0;  --info-700:    #1c5bc0;
+
+  /* ---- Neutral (slate) ---- */
+  --ink-950: #0f1222;
+  --ink-900: #181c30;
+  --ink-800: #232842;
+  --ink-700: #343a5c;
+  --ink-600: #4c537a;
+  --ink-500: #6b7299;
+  --ink-400: #969cba;
+  --ink-300: #c3c7db;
+  --ink-200: #e1e3ef;
+  --ink-100: #eef0f7;
+  --ink-50:  #f6f7fb;
+  --white:   #ffffff;
+
+  /* ---- Surfaces ---- */
+  --bg-app:     #f4f5fb;
+  --bg-surface: #ffffff;
+  --bg-sunken:  #eef0f7;
+  --bg-inverse: #181c30;
+  --border:     #e1e3ef;
+  --border-strong: #c3c7db;
+
+  /* ---- Typography ---- */
+  --font-ar: "Tajawal", "Cairo", "Segoe UI", system-ui, sans-serif;
+  --font-en: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+  --fs-display: 34px;
+  --fs-h1: 26px;
+  --fs-h2: 21px;
+  --fs-h3: 17px;
+  --fs-body: 15px;
+  --fs-sm: 13px;
+  --fs-xs: 11.5px;
+
+  --lh-tight: 1.25;
+  --lh-normal: 1.55;
+
+  /* ---- Spacing (4pt grid) ---- */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px;
+  --s-12: 48px; --s-16: 64px;
+
+  /* ---- Radius ---- */
+  --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 22px; --r-pill: 999px;
+
+  /* ---- Elevation ---- */
+  --sh-xs: 0 1px 2px rgba(24,28,48,.06);
+  --sh-sm: 0 2px 6px rgba(24,28,48,.07), 0 1px 2px rgba(24,28,48,.05);
+  --sh-md: 0 10px 24px -8px rgba(34,26,77,.18), 0 2px 6px rgba(24,28,48,.06);
+  --sh-lg: 0 24px 60px -18px rgba(34,26,77,.30), 0 6px 16px -8px rgba(24,28,48,.12);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+}

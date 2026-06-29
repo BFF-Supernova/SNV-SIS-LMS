@@ -1,0 +1,91 @@
+<!-- @dsCard group="Screens · Setup Wizard" name="Stage 0 — Welcome & Locale" subtitle="Language, country pack, Express/Custom" viewport-width="1280" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المعالج — الترحيب واللغة</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<style>
+  .wiz { display:grid; grid-template-columns: 320px 1fr; min-height:100vh; }
+  .wiz-aside { background:
+      radial-gradient(700px 360px at 90% -10%, var(--nova-700), transparent 60%),
+      linear-gradient(170deg, var(--nova-950), var(--nova-900));
+    color:#fff; padding: var(--s-10) var(--s-8); display:flex; flex-direction:column; }
+  .wiz-aside .brand .name { color:#fff; }
+  .wiz-aside .tour { margin-top:auto; font-size:var(--fs-sm); color:var(--nova-100); }
+  .steps { display:flex; flex-direction:column; gap:2px; margin-top: var(--s-10); }
+  .step { display:flex; gap:12px; align-items:center; padding:9px 12px; border-radius:var(--r-md); font-size:var(--fs-sm); color:var(--nova-100); }
+  .step .num { width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:var(--fs-xs);
+    font-weight:700;background:rgba(255,255,255,.14);color:#fff;flex:none; }
+  .step.active { background:rgba(255,255,255,.12);color:#fff;font-weight:700; }
+  .step.active .num { background:var(--gold-500);color:var(--ink-950); }
+  .wiz-body { padding: var(--s-12) var(--s-12); display:flex; align-items:center; justify-content:center; }
+  .wiz-inner { width:100%; max-width:640px; }
+  @media (max-width:900px){ .wiz{grid-template-columns:1fr;} .wiz-aside{display:none;} }
+</style>
+</head>
+<body>
+<div class="wiz">
+  <aside class="wiz-aside">
+    <div class="brand" style="padding:0;"><div class="logo">✦</div><div class="name">SNV SIS<small>StudentFlow</small></div></div>
+    <div class="steps">
+      <div class="step active"><span class="num">0</span> الترحيب واللغة</div>
+      <div class="step"><span class="num">1</span> نوع المؤسسة</div>
+      <div class="step"><span class="num">2</span> البنية الأكاديمية</div>
+      <div class="step"><span class="num">3</span> الحضور</div>
+      <div class="step"><span class="num">4</span> التقييم و LMS</div>
+      <div class="step"><span class="num">…</span> 12 خطوة</div>
+    </div>
+    <div class="tour">سنُهيّئ المنصة تلقائيًا بناءً على إجاباتك — لن ترى ميزات لا تحتاجها.</div>
+  </aside>
+
+  <main class="wiz-body">
+    <div class="wiz-inner">
+      <div class="muted" style="font-size:var(--fs-sm)">الخطوة 0 من 12</div>
+      <h1 style="font-size:var(--fs-display);font-weight:800;letter-spacing:-.02em;margin-top:4px;">أهلًا بك في SNV SIS</h1>
+      <p class="muted" style="font-size:var(--fs-h3);margin-top:8px;">لنبدأ بإعداد لغتك وبلدك. الإعداد يستغرق دقائق — ويمكنك تغيير كل شيء لاحقًا.</p>
+
+      <div class="stack" style="margin-top:32px;gap:24px;">
+        <div class="field">
+          <div class="label">لغة الواجهة · Interface language</div>
+          <div class="grid" style="grid-template-columns:1fr 1fr;">
+            <div class="opt is-selected"><div class="opt-ico">ع</div><div><div class="opt-title">العربية</div><div class="opt-desc">RTL · الافتراضي</div></div><div class="opt-check">✓</div></div>
+            <div class="opt"><div class="opt-ico">En</div><div><div class="opt-title">English</div><div class="opt-desc">LTR interface</div></div><div class="opt-check">✓</div></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="label">الدولة · Country</div>
+          <div class="opt is-selected">
+            <div class="opt-ico">🇪🇬</div>
+            <div><div class="opt-title">مصر · Egypt</div>
+              <div class="opt-desc">تحميل حزمة الامتثال المصرية: PDPL، فاتورة ETA، الرقم القومي، هياكل وزارة التربية والتعليم.</div></div>
+            <div class="opt-check">✓</div>
+          </div>
+          <div class="banner banner-info" style="margin-top:12px;">
+            <span class="ico">🛡️</span>
+            <div>حزمة مصر تُفعّل تلقائيًا حماية البيانات وسجلّ التدقيق وموافقة وليّ الأمر للقُصّر — ولا يمكن تعطيلها.</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="label">وضع الإعداد · Setup mode</div>
+          <div class="grid" style="grid-template-columns:1fr 1fr;">
+            <div class="opt is-selected"><div class="opt-ico">⚡</div><div><div class="opt-title">سريع · Express</div><div class="opt-desc">إعدادات موصى بها ثم الهوية مباشرة.</div></div><div class="opt-check">✓</div></div>
+            <div class="opt"><div class="opt-ico">⚙️</div><div><div class="opt-title">مخصّص · Custom</div><div class="opt-desc">كل سؤال بالتفصيل.</div></div><div class="opt-check">✓</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="justify-content:space-between;margin-top:36px;">
+        <span class="dotline">يمكنك تغيير ذلك لاحقًا من الإعدادات</span>
+        <button class="btn btn-primary btn-lg">ابدأ ✦</button>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

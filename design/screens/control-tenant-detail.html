@@ -1,0 +1,108 @@
+<!-- @dsCard group="Screens · Control plane" name="Tenant detail & impersonation" subtitle="Lifecycle, usage meters, PDPL-safe impersonation" viewport-width="1280" -->
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supernova Console — Tenant Detail</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<style>
+  body{font-family:var(--font-en);} .brand .name{font-family:var(--font-en);}
+  .life { display:flex; align-items:center; gap:0; flex-wrap:wrap; }
+  .life .node { display:flex; flex-direction:column; align-items:center; gap:6px; font-size:var(--fs-xs); color:var(--ink-400); }
+  .life .node .ball { width:16px;height:16px;border-radius:50%;background:var(--ink-200); }
+  .life .node.done .ball { background:var(--success-500); } .life .node.done { color:var(--ink-700); }
+  .life .node.now .ball { background:var(--nova-500); box-shadow:0 0 0 4px var(--nova-100); } .life .node.now { color:var(--nova-700);font-weight:700; }
+  .life .bar { height:3px; width:46px; background:var(--ink-200); margin:0 4px 18px; }
+  .life .bar.done { background:var(--success-500); }
+  .modal { background:#fff; border:1px solid var(--border); border-radius:var(--r-lg); box-shadow:var(--sh-lg); overflow:hidden; }
+  .modal .hd { padding:18px 22px; background:var(--danger-50); border-bottom:1px solid #f4c4c3; display:flex; gap:12px; align-items:center; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">✦</div><div class="name">Supernova<small>Operations Console</small></div></div>
+    <div class="nav-group">Control plane</div>
+    <div class="nav-item"><span class="ico">🛰️</span> Tenant Directory</div>
+    <div class="nav-item"><span class="ico">＋</span> Provisioning</div>
+    <div class="nav-item"><span class="ico">💳</span> Billing</div>
+    <div class="nav-item active"><span class="ico">🛟</span> Support</div>
+    <div class="nav-item"><span class="ico">📊</span> Analytics (BI)</div>
+    <div class="nav-item"><span class="ico">🛡️</span> Compliance</div>
+    <div class="nav-item" style="margin-top:auto;"><span class="ico">⚙️</span> Settings &amp; RBAC</div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="row" style="flex:1;gap:8px;"><span class="muted">Tenants /</span> <b>Al-Noor International</b> <span class="badge badge-nova">School</span><span class="mono hint">alnoor.snvsis.app</span></div>
+      <span class="badge badge-success"><span class="dot"></span>Active</span>
+      <div class="avatar alt2">SA</div>
+    </div>
+
+    <div class="content">
+      <div class="page-hd">
+        <div><h1>Al-Noor International School</h1><p>tenantId <span class="mono">7f3a…c91</span> · EG · schema-isolated · owner: ahmed@alnoor.edu</p></div>
+        <div class="row">
+          <button class="btn btn-ghost">View DPA</button>
+          <button class="btn btn-secondary">Feature flags</button>
+          <button class="btn btn-danger">Log in as tenant</button>
+        </div>
+      </div>
+
+      <div class="card card-pad" style="margin-bottom:24px;">
+        <div class="section-label">Lifecycle</div>
+        <div class="life">
+          <div class="node done"><span class="ball"></span>Provisioning</div><div class="bar done"></div>
+          <div class="node done"><span class="ball"></span>Trial</div><div class="bar done"></div>
+          <div class="node now"><span class="ball"></span>Active</div><div class="bar"></div>
+          <div class="node"><span class="ball"></span>Past-due</div><div class="bar"></div>
+          <div class="node"><span class="ball"></span>Suspended</div><div class="bar"></div>
+          <div class="node"><span class="ball"></span>Terminated</div><div class="bar"></div>
+          <div class="node"><span class="ball"></span>Archived</div>
+        </div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:1.4fr 1fr;">
+        <div class="card">
+          <div class="card-hd"><h3>Usage metering · 2026-06</h3><span class="badge badge-success">Within plan</span></div>
+          <div class="card-bd stack" style="gap:18px;">
+            <div><div class="row" style="justify-content:space-between;font-size:var(--fs-sm);"><b>Active students</b><span class="mono">1,240 / 1,500</span></div><div class="meter" style="margin-top:6px;"><span style="width:83%;background:var(--nova-500)"></span></div></div>
+            <div><div class="row" style="justify-content:space-between;font-size:var(--fs-sm);"><b>Video storage</b><span class="mono">312 / 500 GB</span></div><div class="meter" style="margin-top:6px;"><span style="width:62%;background:var(--nova-500)"></span></div></div>
+            <div><div class="row" style="justify-content:space-between;font-size:var(--fs-sm);"><b>WhatsApp messages</b><span class="mono">41.2k / 50k</span></div><div class="meter" style="margin-top:6px;"><span style="width:82%;background:var(--warning-500)"></span></div></div>
+            <div><div class="row" style="justify-content:space-between;font-size:var(--fs-sm);"><b>AI question generation</b><span class="mono">870 / 2,000</span></div><div class="meter" style="margin-top:6px;"><span style="width:43%;background:var(--nova-500)"></span></div></div>
+          </div>
+        </div>
+
+        <div class="modal">
+          <div class="hd"><span style="font-size:20px;">🔐</span><div><b>Start impersonation</b><div class="hint">PDPL processor action — never silent</div></div></div>
+          <div class="card-bd stack" style="gap:14px;">
+            <div class="field"><label class="label">Reason code · linked ticket</label><input class="input" value="ticket-1843 — parent can't see report card" dir="ltr"></div>
+            <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px;">
+              <div class="field"><label class="label">Scope</label><select class="select"><option selected>Read-only (least privilege)</option><option>Read-write (approval-gated)</option></select></div>
+              <div class="field"><label class="label">Auto-expires</label><select class="select"><option selected>30 minutes</option><option>60 minutes</option></select></div>
+            </div>
+            <div class="banner banner-warning"><span class="ico">⚠️</span><div>Tenant admin will be <b>notified</b>, a banner shows during the session, and every viewed/changed record is <b>audited</b>. Sensitive PII requires approval.</div></div>
+            <div class="row" style="justify-content:flex-end;"><button class="btn btn-ghost">Cancel</button><button class="btn btn-danger">Begin scoped session</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:24px;">
+        <div class="card-hd"><h3>Provider-access audit</h3><span class="badge badge-info">Reviewable · exportable</span></div>
+        <table class="table">
+          <thead><tr><th>When</th><th>Agent</th><th>Action</th><th>Scope</th><th>Ticket</th></tr></thead>
+          <tbody>
+            <tr><td class="num">2026-06-28 14:02</td><td>L2 · Mariam</td><td>Impersonation — viewed report card #SAMA</td><td><span class="badge badge-outline">read-only</span></td><td class="mono">ticket-1843</td></tr>
+            <tr><td class="num">2026-06-21 10:31</td><td>L3 · Eng</td><td>Data fix — re-synced gradebook</td><td><span class="badge badge-warning">approved</span></td><td class="mono">ticket-1790</td></tr>
+            <tr><td class="num">2026-06-15 09:10</td><td>Billing · Omar</td><td>Plan change — +250 seats, prorated</td><td><span class="badge badge-outline">billing</span></td><td class="mono">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

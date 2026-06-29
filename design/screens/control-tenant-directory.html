@@ -1,0 +1,116 @@
+<!-- @dsCard group="Screens · Control plane" name="Tenant directory" subtitle="Supernova Operations Console — status, plan, MRR, health" viewport-width="1280" -->
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supernova Console — Tenant Directory</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<style> body{font-family:var(--font-en);} .name,.brand .name{font-family:var(--font-en);} </style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">✦</div><div class="name">Supernova<small>Operations Console</small></div></div>
+    <div class="nav-group">Control plane</div>
+    <div class="nav-item active"><span class="ico">🛰️</span> Tenant Directory</div>
+    <div class="nav-item"><span class="ico">＋</span> Provisioning</div>
+    <div class="nav-item"><span class="ico">💳</span> Billing</div>
+    <div class="nav-item"><span class="ico">📈</span> Usage</div>
+    <div class="nav-item"><span class="ico">🛟</span> Support</div>
+    <div class="nav-item"><span class="ico">📊</span> Analytics (BI)</div>
+    <div class="nav-item"><span class="ico">🚀</span> Releases</div>
+    <div class="nav-item"><span class="ico">🛡️</span> Compliance</div>
+    <div class="nav-item" style="margin-top:auto;"><span class="ico">⚙️</span> Settings &amp; RBAC</div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="search"><span class="ico">🔍</span><input class="input" placeholder="Search tenants, subdomains, owners…"></div>
+      <span class="badge badge-danger"><span class="dot"></span>2 past-due</span>
+      <button class="btn btn-primary btn-sm">＋ New tenant</button>
+      <div class="avatar alt2">SA</div>
+    </div>
+
+    <div class="content">
+      <div class="page-hd">
+        <div><h1>Tenant Directory</h1><p>148 tenants under management · provider-side billing &amp; lifecycle</p></div>
+        <div class="row"><button class="btn btn-ghost">Export</button><button class="btn btn-secondary">Filters</button></div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:24px;">
+        <div class="tile kpi"><div class="k-label">MRR</div><div class="k-value">EGP 1.46M</div><div class="k-delta delta-up">▲ 12.4% MoM</div></div>
+        <div class="tile kpi"><div class="k-label">Students under mgmt</div><div class="k-value">312k</div><div class="k-delta delta-up">▲ 8.1%</div></div>
+        <div class="tile kpi"><div class="k-label">Trial → paid</div><div class="k-value">41%</div><div class="k-delta delta-up">▲ 3 pts</div></div>
+        <div class="tile kpi"><div class="k-label">Net churn</div><div class="k-value">1.8%</div><div class="k-delta delta-down">▼ at-risk: 5</div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-hd">
+          <h3>All tenants</h3>
+          <div class="row" style="gap:6px;">
+            <span class="badge badge-nova">School 38</span><span class="badge badge-outline">Center 71</span>
+            <span class="badge badge-outline">Teacher 33</span><span class="badge badge-gold">★ Group 6</span>
+          </div>
+        </div>
+        <table class="table">
+          <thead><tr><th>Tenant</th><th>Plan</th><th>Status</th><th>Region / Isolation</th><th class="num">Students</th><th class="num">MRR</th><th>Health</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="row"><div class="avatar">AN</div><div><b>Al-Noor International</b><div class="hint mono">alnoor · SCHOOL</div></div></div></td>
+              <td><span class="badge badge-nova">School · Annual</span></td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td>EG · <span class="mono">schema</span></td>
+              <td class="num">1,240</td><td class="num">EGP 18.6k</td>
+              <td><div class="meter" style="width:80px"><span style="width:96%;background:var(--success-500)"></span></div></td>
+            </tr>
+            <tr>
+              <td><div class="row"><div class="avatar alt">RC</div><div><b>Riyada Centers (4)</b><div class="hint mono">riyada · CENTER-CHAIN</div></div></div></td>
+              <td><span class="badge badge-gold">★ Group console</span></td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td>EG · <span class="mono">schema</span></td>
+              <td class="num">3,910</td><td class="num">EGP 41.2k</td>
+              <td><div class="meter" style="width:80px"><span style="width:88%;background:var(--success-500)"></span></div></td>
+            </tr>
+            <tr>
+              <td><div class="row"><div class="avatar alt2">MT</div><div><b>Mr. Tarek — Physics</b><div class="hint mono">tarek-phys · TEACHER</div></div></div></td>
+              <td><span class="badge badge-outline">Teacher</span></td>
+              <td><span class="badge badge-info"><span class="dot"></span>Trial · 6d left</span></td>
+              <td>EG · <span class="mono">pooled+RLS</span></td>
+              <td class="num">128</td><td class="num">—</td>
+              <td><div class="meter" style="width:80px"><span style="width:64%;background:var(--warning-500)"></span></div></td>
+            </tr>
+            <tr>
+              <td><div class="row"><div class="avatar">FA</div><div><b>Al-Fajr Language School</b><div class="hint mono">alfajr · SCHOOL</div></div></div></td>
+              <td><span class="badge badge-nova">School · Monthly</span></td>
+              <td><span class="badge badge-warning"><span class="dot"></span>Past-due · 9d</span></td>
+              <td>EG · <span class="mono">schema</span></td>
+              <td class="num">860</td><td class="num">EGP 11.0k</td>
+              <td><div class="meter" style="width:80px"><span style="width:40%;background:var(--danger-500)"></span></div></td>
+            </tr>
+            <tr>
+              <td><div class="row"><div class="avatar alt">NG</div><div><b>Nile Group of Schools</b><div class="hint mono">nilegroup · GROUP</div></div></div></td>
+              <td><span class="badge badge-gold">★ Group console</span></td>
+              <td><span class="badge badge-success"><span class="dot"></span>Active</span></td>
+              <td>EG · <span class="mono">DB-per-tenant</span></td>
+              <td class="num">9,420</td><td class="num">EGP 132k</td>
+              <td><div class="meter" style="width:80px"><span style="width:92%;background:var(--success-500)"></span></div></td>
+            </tr>
+            <tr>
+              <td><div class="row"><div class="avatar alt2">SC</div><div><b>Smart Kids Center</b><div class="hint mono">smartkids · CENTER</div></div></div></td>
+              <td><span class="badge badge-outline">Center</span></td>
+              <td><span class="badge badge-danger"><span class="dot"></span>Suspended</span></td>
+              <td>EG · <span class="mono">pooled+RLS</span></td>
+              <td class="num">410</td><td class="num">EGP 0</td>
+              <td><div class="meter" style="width:80px"><span style="width:12%;background:var(--ink-400)"></span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

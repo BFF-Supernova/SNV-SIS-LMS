@@ -1,0 +1,58 @@
+<!-- @dsCard group="Screens · Setup Wizard" name="Stage 12 — Applying configuration" subtitle="Provisioning screen → onboarding checklist" viewport-width="1280" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المعالج — تطبيق الإعدادات</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<style>
+  .stage { min-height:100vh; display:grid; place-items:center;
+    background: radial-gradient(800px 420px at 50% -10%, var(--nova-100), transparent 60%), var(--bg-app); padding: var(--s-8); }
+  .panel { width:100%; max-width:560px; text-align:center; }
+  .orb { width:96px; height:96px; margin:0 auto var(--s-6); border-radius:50%;
+    background: conic-gradient(from 0deg, var(--nova-500), var(--gold-500), var(--nova-500));
+    display:grid; place-items:center; box-shadow: var(--sh-lg);
+    animation: spin 2.4s linear infinite; }
+  .orb i { width:74px;height:74px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:34px;color:var(--nova-600); font-style:normal; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .tasks { text-align:start; margin-top: var(--s-8); display:flex; flex-direction:column; gap:10px; }
+  .tk { display:flex; align-items:center; gap:12px; padding:12px 16px; background:#fff; border:1px solid var(--border); border-radius:var(--r-md); font-size:var(--fs-sm); }
+  .tk .ck { width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:13px;flex:none; }
+  .tk.done .ck { background:var(--success-500);color:#fff; }
+  .tk.busy .ck { border:2px solid var(--nova-400); color:var(--nova-500); }
+  .tk.wait .ck { border:2px solid var(--ink-200); color:var(--ink-300); }
+  .tk.wait { color:var(--ink-400); }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="panel">
+    <div class="orb"><i>✦</i></div>
+    <h1 style="font-size:var(--fs-h1);font-weight:800;">جارٍ تطبيق إعداداتك…</h1>
+    <p class="muted" style="font-size:var(--fs-h3);">نُهيّئ مدرسة النور الدولية — هذا يستغرق لحظات.</p>
+
+    <div class="progress" style="margin:24px 0 8px;"><span style="width:72%"></span></div>
+    <div class="row" style="justify-content:space-between;font-size:var(--fs-xs);color:var(--ink-500);">
+      <span>72%</span><span>alnoor.snvsis.app</span>
+    </div>
+
+    <div class="tasks">
+      <div class="tk done"><span class="ck">✓</span> إنشاء هيكل المؤسسة والصلاحيات (RBAC)</div>
+      <div class="tk done"><span class="ck">✓</span> تفعيل الوحدات: الجدول، كشف الدرجات، الحضور بالحصة</div>
+      <div class="tk done"><span class="ck">✓</span> حزمة مصر: PDPL، سجلّ التدقيق، فاتورة ETA</div>
+      <div class="tk busy"><span class="ck">◐</span> تجهيز مصفوفة الإشعارات وقنوات واتساب</div>
+      <div class="tk wait"><span class="ck">○</span> تطبيق الهوية البصرية وقوالب البطاقات</div>
+      <div class="tk wait"><span class="ck">○</span> إضافة فصل وطلاب تجريبيين (اختياري)</div>
+    </div>
+
+    <div class="banner banner-info" style="margin-top:24px;text-align:start;">
+      <span class="ico">✓</span>
+      <div>بعد الانتهاء: قائمة تهيئة + جولة إرشادية تفاعلية تأخذك خطوة بخطوة داخل المنصة.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

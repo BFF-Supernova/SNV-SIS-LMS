@@ -1,0 +1,94 @@
+<!-- @dsCard group="Foundations" name="Colors" subtitle="Nova-violet brand, gold accent, semantic + neutral scales" -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الألوان · Colors</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<style>
+  .scale { display:grid; grid-template-columns: repeat(6,1fr); gap: var(--s-3); }
+  .chip .swatch { height:72px; }
+  .chip .meta { display:flex; justify-content:space-between; padding-top:6px; font-size: var(--fs-xs); }
+  .chip .meta b { font-weight:700; } .chip .meta span { color: var(--ink-400); font-family: var(--font-mono); }
+  @media (max-width:760px){ .scale{grid-template-columns:repeat(3,1fr);} }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="stack" style="max-width:1040px;margin:0 auto;">
+    <div>
+      <h1 style="font-size:var(--fs-h1);font-weight:800;">الألوان · Color system</h1>
+      <p class="muted">Violet carries trust + intelligence; the gold star marks premium add-ons, ratings, and Supernova brand moments. Semantic colors are reserved strictly for state.</p>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Brand — Nova violet</div>
+      <div class="scale">
+        <div class="chip"><div class="swatch" style="background:var(--nova-50)"></div><div class="meta"><b>50</b><span>#f1f0fe</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-100)"></div><div class="meta"><b>100</b><span>#e4e2fd</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-200)"></div><div class="meta"><b>200</b><span>#cdc9fb</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-300)"></div><div class="meta"><b>300</b><span>#ada5f7</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-400)"></div><div class="meta"><b>400</b><span>#8b7cf1</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-500)"></div><div class="meta"><b>500★</b><span>#6f5ce8</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-600)"></div><div class="meta"><b>600</b><span>#5b46d6</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-700)"></div><div class="meta"><b>700</b><span>#4c39b4</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-800)"></div><div class="meta"><b>800</b><span>#3f3193</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-900)"></div><div class="meta"><b>900</b><span>#362c76</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--nova-950)"></div><div class="meta"><b>950</b><span>#221a4d</span></div></div>
+        <div class="chip"><div class="swatch" style="background:linear-gradient(135deg,var(--nova-400),var(--gold-500))"></div><div class="meta"><b>brand</b><span>grad</span></div></div>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Accent — Gold star</div>
+      <div class="scale" style="grid-template-columns:repeat(4,1fr);max-width:520px;">
+        <div class="chip"><div class="swatch" style="background:var(--gold-300)"></div><div class="meta"><b>300</b><span>#ffd98a</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--gold-400)"></div><div class="meta"><b>400</b><span>#fbc04a</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--gold-500)"></div><div class="meta"><b>500★</b><span>#f5a623</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--gold-600)"></div><div class="meta"><b>600</b><span>#d9870e</span></div></div>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Semantic — state only</div>
+      <div class="scale" style="grid-template-columns:repeat(4,1fr);">
+        <div class="chip"><div class="swatch" style="background:var(--success-500)"></div><div class="meta"><b>Success</b><span>#16a36a</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--warning-500)"></div><div class="meta"><b>Warning</b><span>#e9920b</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--danger-500)"></div><div class="meta"><b>Danger</b><span>#e0413e</span></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--info-500)"></div><div class="meta"><b>Info</b><span>#2f7ff0</span></div></div>
+      </div>
+      <div class="row" style="margin-top:16px;gap:8px;">
+        <span class="badge badge-success"><span class="dot"></span>Active</span>
+        <span class="badge badge-warning"><span class="dot"></span>Past-due</span>
+        <span class="badge badge-danger"><span class="dot"></span>Suspended</span>
+        <span class="badge badge-info"><span class="dot"></span>Trial</span>
+        <span class="badge badge-nova"><span class="dot"></span>Provisioning</span>
+        <span class="badge"><span class="dot"></span>Archived</span>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="section-label">Neutral — ink scale</div>
+      <div class="scale">
+        <div class="chip"><div class="swatch" style="background:var(--ink-50);border-color:var(--border)"></div><div class="meta"><b>50</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-100)"></div><div class="meta"><b>100</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-200)"></div><div class="meta"><b>200</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-300)"></div><div class="meta"><b>300</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-400)"></div><div class="meta"><b>400</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-500)"></div><div class="meta"><b>500</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-600)"></div><div class="meta"><b>600</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-700)"></div><div class="meta"><b>700</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-800)"></div><div class="meta"><b>800</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-900)"></div><div class="meta"><b>900</b></div></div>
+        <div class="chip"><div class="swatch" style="background:var(--ink-950)"></div><div class="meta"><b>950</b></div></div>
+        <div class="chip"><div class="swatch" style="background:#fff;border-color:var(--border)"></div><div class="meta"><b>white</b></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
